@@ -21,11 +21,11 @@ Tested on both _Windows_ and _macOS_, with:
 
 ## How to Use
 
-### Update Configurations
+### 1. Update Configurations
 
 - Edit `webpack.config.js` and update the configuration field `entry` to determine what to be built;
 
-### CLI Commands
+### 2. CLI Commands
 
 ```bash
 # Install dependencies
@@ -34,15 +34,23 @@ yarn install
 # Start dev server
 yarn run start
 
-# Build the application
+# Build application
 yarn run build
+
+# Commit
+yarn commit
+
+# Release
+yarn release
 ```
 
-## Notes
-
-### About Hot Module Replacement (HMR)
+## Hot Module Replacement (HMR)
 
 To use [Hot Module Replacement](https://webpack.js.org/concepts/hot-module-replacement/), please place components outside of the top-level file. Components in the top-level file will be downgraded to _live reload_.
+
+## Class Names in CSS-Modules
+
+CSS's naming convention requires the class names to be in `kebab-case`. However, in JavaScrip, it is not allowed to write `style.my-style` and only accepts `style['my-style']` or `style.myStyle`. It is not convenient. Therefore, in this boilerplate, the class names in css-modules will be converted from `kebab-case` to `camelCase` to allow usages such as `style.myStyle`. 
 
 ## Credits
 
