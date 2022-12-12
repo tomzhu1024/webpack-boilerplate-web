@@ -26,7 +26,6 @@ const config = {
   devServer: {
     hot: true,
     client: { overlay: false },
-    static: path.resolve(__dirname, 'build'),
     host: env.HOST,
     port: env.PORT,
     open: true,
