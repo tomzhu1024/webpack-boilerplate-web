@@ -45,7 +45,6 @@
     "@commitlint/config-conventional": "^17.0.3",
     "@nuxt/friendly-errors-webpack-plugin": "^2.5.2",
     "@pmmmwh/react-refresh-webpack-plugin": "^0.5.7",
-    "@svgr/webpack": "^6.2.1",
     "@types/react": "^18.0.15",
     "@types/react-dom": "^18.0.6",
     "@typescript-eslint/eslint-plugin": "^5.30.6",
