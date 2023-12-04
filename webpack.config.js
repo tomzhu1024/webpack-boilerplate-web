@@ -35,7 +35,8 @@ const config = {
   },
   output: {
     path: path.resolve(__dirname, 'build'),
-    filename: '[name].bundle.js',
+    filename: '[name]_[contenthash].js',
+    chunkFilename: '[id]_[contenthash].js',
     publicPath: '/',
   },
   module: {
@@ -150,7 +151,9 @@ const prodConfig = merge(config, {
     new WebpackBarPlugin({
       profile: true, // Require patch to work properly.
     }),
-    new MiniCssExtractPlugin(),
+    new MiniCssExtractPlugin({
+      filename: '[name]_[contenthash].css',
+    }),
     isAnalyzer &&
       new BundleAnalyzerPlugin({
         analyzerMode: 'static',
